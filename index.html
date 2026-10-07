@@ -3,42 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <search class="search-bar">Search ...</search>
-        <div class="user-info">Hi there,</div>
+        <search class="search-bar">
+          <div class="magnify-icon">
+            <i class="mdi mdi-magnify"></i>
+          </div>
+          <div class="empty-box"></div>
+        </search>
+
+        <div class="user-info">
+          <div class="user-icon mdi mdi-cat"></div>
+          <div class="text">
+            <p>Hi there,</p>
+            <p>Morgan Oakley (@morgan)</p>
+          </div>
+        </div>
         <div class="actions">
           <button>New</button>
           <button>Upload</button>
           <button>Share</button>
         </div>
         <div class="extras">
-          <button>Bell</button>
-          <div>Logo</div>
+          <button>
+            <div class="button-icon">
+              <i class="mdi mdi-bell-ring-outline"></i>
+            </div>
+          </button>
+          <div class="icon-box">
+            <div class="small-icon mdi mdi-cat"></div>
+          </div>
+
           <p>Morgan Oakley</p>
         </div>
       </div>
       <div class="sidebar">
-        <div class="branding">DASHBOARD</div>
+        <div class="branding">
+          <i class="mdi mdi-view-dashboard"></i>
+          <span>Dashboard</span>
+        </div>
+
         <nav class="primary-nav">
           <ul>
-            <li>Home</li>
-            <li>Profile</li>
-            <li>Messages</li>
-            <li>History</li>
-            <li>Tasks</li>
-            <li>Communities</li>
+            <li>
+              <i class="mdi mdi-home"></i>
+              <span>Home</span>
+            </li>
+
+            <li>
+              <i class="mdi mdi-card-account-details-outline"></i>
+              <span>Profile</span>
+            </li>
+
+            <li>
+              <i class="mdi mdi-message"></i>
+              <span>Messages</span>
+            </li>
+
+            <li>
+              <i class="mdi mdi-clock-time-three"></i>
+              <span>History</span>
+            </li>
+
+            <li>
+              <i class="mdi mdi-file-multiple"></i>
+              <span>Tasks</span>
+            </li>
+
+            <li>
+              <i class="mdi mdi-account-group"></i>
+              <span>Communities</span>
+            </li>
           </ul>
         </nav>
+
         <nav class="secondary-nav">
           <ul>
-            <li>Settings</li>
-            <li>Support</li>
-            <li>Privacy</li>
+            <li>
+              <i class="mdi mdi-cog"></i>
+              <span>Settings</span>
+            </li>
+
+            <li>
+              <i class="mdi mdi-help-box"></i>
+              <span>Support</span>
+            </li>
+
+            <li>
+              <i class="mdi mdi-shield-check"></i>
+              <span>Privacy</span>
+            </li>
           </ul>
         </nav>
       </div>
@@ -47,77 +115,154 @@
           <h1>Your Projects</h1>
           <div class="cards-container">
             <div class="card">
-              <h2>Title</h2>
-              <p>Description</p>
-              <div>Actions</div>
+              <div class="strip"></div>
+              <h2>Super Cool Project</h2>
+              <p>
+                Sed tempud ut lacus ut scelerisque. Suspendise sollicitudin nibh
+                erat, id facilisis felis accumsan nec.
+              </p>
+
+              <div class="project-icons">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
             </div>
             <div class="card">
-              <h2>Title</h2>
-              <p>Description</p>
-              <div>Actions</div>
+              <div class="strip"></div>
+              <h2>Less Cool Project</h2>
+              <p>
+                Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque
+                sed dolor tincidunt, consectetur sapien et, facilisis dolor.
+                Duis sem purus, dignissium ut sapien in, varius pellentesque
+                lacus.
+              </p>
+
+              <div class="project-icons">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
             </div>
             <div class="card">
-              <h2>Title</h2>
-              <p>Description</p>
-              <div>Actions</div>
+              <div class="strip"></div>
+              <h2>Impossible App</h2>
+              <p>
+                In hac habitasse platea dictumst. Vivamus dictum rurum arcu, a
+                placerat velit sagittis id.
+              </p>
+
+              <div class="project-icons">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
             </div>
             <div class="card">
-              <h2>Title</h2>
-              <p>Description</p>
-              <div>Actions</div>
+              <div class="strip"></div>
+              <h2>Easy Peasy App</h2>
+              <p>
+                Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim
+                urna eget accumsan aliquam. Curabitur dignissim nisi in tortor
+                commodo, ac bibendum magna tincident.
+              </p>
+
+              <div class="project-icons">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
             </div>
             <div class="card">
-              <h2>Title</h2>
-              <p>Description</p>
-              <div>Actions</div>
+              <div class="strip"></div>
+              <h2>Ad Blocker</h2>
+              <p>
+                Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus
+                vel, pharetra hendrerit felis. Aliquam sed malesuada eros.
+              </p>
+
+              <div class="project-icons">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
             </div>
             <div class="card">
-              <h2>Title</h2>
-              <p>Description</p>
-              <div>Actions</div>
+              <div class="strip"></div>
+              <h2>Money Maker</h2>
+              <p>
+                Praesent convallis, libero quis congue elementum, nunc ante
+                faucibus sapien, ac scelerisque tortor purus sit amet ex.
+                Pellentesque mollis nec sem vel aliquam.
+              </p>
+
+              <div class="project-icons">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
             </div>
           </div>
         </div>
         <div class="announcements-container">
           <h1>Announcements</h1>
-          <div class="announcement">
-            <h2>Site Maintenance</h2>
-            <p>
-              Vestibulum conditemnetum tellus lacus, in accumsan elit maximus
-              ac. Donec hendrerit sodales congue...
-            </p>
-          </div>
-          <div class="announcement">
-            <h2>Site Maintenance</h2>
-            <p>
-              Vestibulum conditemnetum tellus lacus, in accumsan elit maximus
-              ac. Donec hendrerit sodales congue...
-            </p>
-          </div>
-          <div class="announcement">
-            <h2>Site Maintenance</h2>
-            <p>
-              Vestibulum conditemnetum tellus lacus, in accumsan elit maximus
-              ac. Donec hendrerit sodales congue...
-            </p>
+          <div class="announcement-card">
+            <div class="announcement">
+              <h2>Site Maintenance</h2>
+              <p>
+                Vestibulum conditemnetum tellus lacus, in accumsan elit maximus
+                ac. Donec hendrerit sodales congue...
+              </p>
+            </div>
+            <div class="announcement">
+              <h2>Community Share Day</h2>
+              <p>
+                Nam vel lectus tincidunt, rutrum nulla eu, ornare libero.
+                Aliquam dictum accumsan porttitor ...
+              </p>
+            </div>
+            <div class="announcement">
+              <h2>Updated Privacy Policy</h2>
+              <p>
+                Phasellus efficitur nisi eget elit consectetur, eget condimentum
+                ante auctor. Cras fringilla sagittis sem in mattis ...
+              </p>
+            </div>
           </div>
         </div>
+
         <div class="trending">
           <h1>Trending</h1>
-          <div class="trending-item">
-            <div>Avatar</div>
-            <h2>UserName</h2>
-            <p>Project</p>
-          </div>
-          <div class="trending-item">
-            <div>Avatar</div>
-            <h2>UserName</h2>
-            <p>Project</p>
-          </div>
-          <div class="trending-item">
-            <div>Avatar</div>
-            <h2>UserName</h2>
-            <p>Project</p>
+
+          <div class="trending-card">
+            <div class="trending-item">
+              <div class="trending-icon tegan-icon mdi mdi-jellyfish-outline"></div>
+              <div class="trending-text">
+                <p>@tegan</p>
+                <p>World Piece Buildder</p>
+              </div>
+            </div>
+            <div class="trending-item">
+              <div class="trending-icon morgan-icon mdi mdi-cat"></div>
+              <div class="trending-text">
+                <p>@morgan</p>
+                <p>Super Cool Project</p>
+              </div>
+            </div>
+            <div class="trending-item">
+              <div class="trending-icon kendall-icon mdi mdi-tortoise"></div>
+              <div class="trending-text">
+                <p>@kendall</p>
+                <p>Life Changing App</p>
+              </div>
+            </div>
+            <div class="trending-item">
+              <div class="trending-icon alex-icon mdi mdi-penguin"></div>
+              <div class="trending-text">
+                <p>@alex</p>
+                <p>No Traffic Maker</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
