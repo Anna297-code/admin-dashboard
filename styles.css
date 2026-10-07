@@ -1,16 +1,29 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
 * {
   font-family: "Google Sans", sans-serif;
 }
 
+/* =========================================================
+   MAIN PAGE LAYOUT
+   ========================================================= */
+
 .container {
   display: grid;
-  grid-template-rows: 1fr 5fr;
-  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1.35fr 5fr;
+  grid-template-columns: 1.4fr 5fr;
 }
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .header {
   background-color: white;
-  grid-row: 1 / 2;
+
+  grid-row: 1 / 1.5;
   grid-column: 2 / 3;
 
   display: grid;
@@ -20,6 +33,11 @@
   padding-left: 40px;
   padding-right: 40px;
 }
+
+/* -------------------------
+   Search Bar
+   ------------------------- */
+
 .search-bar {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
@@ -31,15 +49,21 @@
 }
 
 .magnify-icon {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .empty-box {
   background-color: #e2e8f0;
-  height: 1.7rem;
-  width: 500px;
+
+  height: 2.2rem;
+  width: 800px;
+
   border-radius: 10px;
 }
+
+/* -------------------------
+   User Information
+   ------------------------- */
 
 .user-info {
   grid-row: 2 / 3;
@@ -51,8 +75,6 @@
 }
 
 .user-icon {
-  font-size: 50px;
-
   width: 75px;
   height: 75px;
 
@@ -60,27 +82,36 @@
   align-items: center;
   justify-content: center;
 
+  font-size: 50px;
+
   border: 2px solid black;
   border-radius: 50%;
+
   background-color: #f0b429;
 }
 
 .text {
-  font-weight: bold;
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  font-weight: bold;
 }
 
 .text > :first-child {
-  font-size: 0.8rem;
   margin: 0;
+  font-size: 0.8rem;
 }
 
 .text > :last-child {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
+
+/* -------------------------
+   Header Extras
+   ------------------------- */
+
 .extras {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
@@ -91,10 +122,13 @@
 
 .extras > button {
   grid-column: 1 / 2;
+
+  padding: 0;
+
   border: none;
   background-color: white;
+
   font-size: 1.5rem;
-  padding: 0;
 }
 
 .button-icon {
@@ -109,28 +143,36 @@
 
 .icon-box > .small-icon {
   grid-column: 2 / 3;
-  font-size: 2rem;
-
-  display: grid;
 
   width: 45px;
   height: 45px;
 
+  display: grid;
   align-items: center;
   justify-items: center;
 
+  font-size: 2rem;
+
   outline: 2px solid black;
   border-radius: 50%;
+
   background-color: #f0b429;
 }
 
 .extras > p {
   grid-column: 3 / 4;
+
   display: grid;
   align-content: center;
 
   font-weight: bold;
+  font-size: 1.3rem;
 }
+
+/* -------------------------
+   Header Action Buttons
+   ------------------------- */
+
 .actions {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
@@ -142,31 +184,43 @@
 }
 
 .actions button {
+  height: 60px;
+  width: 130px;
+
+  border: none;
+  border-radius: 40px;
+
   background-color: #1992d4;
   color: white;
-  border: none;
-  height: 40px;
-  width: 110px;
 
-  border-radius: 20px;
-
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
 .sidebar {
   grid-row: 1 / 3;
   grid-column: 1 / 2;
 
   display: grid;
   grid-template-rows: 1fr 3fr 7fr;
+
   padding-left: 20px;
 
   background-color: #1992d4;
   color: white;
 }
 
+/* -------------------------
+   Sidebar Branding
+   ------------------------- */
+
 .branding {
   grid-row: 1 / 2;
+
   display: flex;
   gap: 10px;
   align-items: center;
@@ -183,15 +237,23 @@
   font-size: 1.7rem;
   font-weight: 500;
 }
+
+/* -------------------------
+   Sidebar Navigation
+   ------------------------- */
+
 .primary-nav ul,
 .secondary-nav ul {
-  list-style-type: none;
   display: flex;
   flex-direction: column;
+
   padding: 0;
+
   gap: 17px;
 
-  font-size: 1.3rem;
+  list-style-type: none;
+
+  font-size: 1.35rem;
   font-weight: 450;
 }
 
@@ -201,33 +263,51 @@
   gap: 20px;
 }
 
+/* -------------------------
+   Primary Navigation
+   ------------------------- */
+
 .primary-nav {
   grid-row: 2/3;
 
   font-size: 1rem;
 }
 
+/* -------------------------
+   Secondary Navigation
+   ------------------------- */
+
 .secondary-nav {
   grid-row: 3 / 4;
   padding-top: 20px;
 }
 
-.main {
-  background-color: #e2e8f0;
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
 
+.main {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
 
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 3fr 1fr;
-  padding: 20px;
+  grid-template-columns: 3fr 1.1fr;
+
+  padding: 15px;
+
+  background-color: #e2e8f0;
 }
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
 
 .your-projects {
   grid-row: span 2;
   grid-column: 1 / 2;
-  padding: 20px;
+
+  padding: 15px;
 }
 
 .your-projects h1 {
@@ -235,63 +315,105 @@
   font-weight: 600;
 }
 
+/* -------------------------
+   Project Card Grid
+   ------------------------- */
+
 .cards-container {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, 200px);
+  grid-template-rows: repeat(3, 190px);
+
   gap: 20px;
 }
-.cards-container > .card {
-  background-color: white;
-  border-radius: 15px;
-  column-gap: 20px;
 
+/* -------------------------
+   Project Cards
+   ------------------------- */
+
+.card {
   display: grid;
   grid-template-columns: 1fr 50fr;
+
+  background-color: white;
+  border-radius: 15px;
+
+  column-gap: 20px;
 }
 
-.cards-container > .card > .strip {
-  background-color: #f0b429;
+/* -------------------------
+   Project Card Yellow Strip
+   ------------------------- */
+
+.card .strip {
   grid-column: 1 / 2;
   grid-row: 1 / 4;
+
+  background-color: #f0b429;
 }
 
-.cards-container > .card > h2 {
-  margin: 0;
+/* -------------------------
+   Project Card Titles
+   ------------------------- */
+
+.card h2 {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 
-  font-size: 1.1rem;
-  font-weight: 600;
+  margin: 0;
   padding-top: 40px;
+
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-.cards-container > .card > p {
-  margin: 0;
+/* -------------------------
+   Project Card Descriptions
+   ------------------------- */
+
+.card p {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 
+  margin: 0;
+
   color: #636363;
+  font-size: 1rem;
 }
 
-.cards-container > .card > .project-icons {
+/* -------------------------
+   Project Card Headings and Descriptions
+   ------------------------- */
+
+.cards-container > .card > h2,
+.cards-container > .card > p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* -------------------------
+   Project Card Icons
+   ------------------------- */
+
+.project-icons {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
 
-  font-size: 1.5rem;
-
   display: flex;
   justify-content: flex-end;
+
+  font-size: 1.6rem;
+
   gap: 20px;
-  padding-right: 15px;
-}
-.announcement {
-  border-bottom: 2px solid #e2e8f0;
+
+  padding-right: 25px;
 }
 
-.announcement:last-child {
-  border-bottom: none;
-}
+/* =========================================================
+   ANNOUNCEMENTS
+   ========================================================= */
+
 .announcements-container {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
@@ -302,49 +424,102 @@
   padding: 10px;
 }
 
+/* -------------------------
+   Announcement Card
+   ------------------------- */
+
 .announcement-card {
-  background-color: white;
   padding: 20px;
+
+  background-color: white;
   border-radius: 10px;
 }
 
-.announcement h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0;
+/* -------------------------
+   Individual Announcements
+   ------------------------- */
+
+.announcement {
+  border-bottom: 2px solid #e2e8f0;
 }
 
-.announcement p {
-  font-size: 0.9rem;
-  color: #636363;
-  margin-top: 0;
+.announcement:last-child {
+  border-bottom: none;
 }
+
+/* -------------------------
+   Announcement Titles
+   ------------------------- */
+
+.announcement h2 {
+  margin-bottom: 0;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* -------------------------
+   Announcement Descriptions
+   ------------------------- */
+
+.announcement p {
+  margin-top: 0;
+
+  font-size: 0.95rem;
+  color: #636363;
+}
+
+/* =========================================================
+   TRENDING
+   ========================================================= */
+
 .trending {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
 }
 
+/* -------------------------
+   Trending Heading
+   ------------------------- */
+
+.trending h1 {
+  padding-top: 20px;
+
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* -------------------------
+   Trending Card
+   ------------------------- */
+
 .trending-card {
+  display: flex;
+  flex-direction: column;
+
   background-color: white;
   border-radius: 10px;
 
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  gap: 30px;
+  padding: 20px;
+  gap: 25px;
 }
 
-.trending h1 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  padding-top: 20px;
-}
+
+/* -------------------------
+   Trending Items
+   ------------------------- */
 
 .trending-item {
   display: flex;
   align-items: center;
+
   gap: 20px;
 }
+
+
+/* -------------------------
+   Trending Icons
+   ------------------------- */
 
 .trending-icon {
   width: 50px;
@@ -360,9 +535,14 @@
   font-size: 1.8rem;
 }
 
+/* -------------------------
+   Trending Text
+   ------------------------- */
+
 .trending-text {
   display: flex;
   flex-direction: column;
+
   gap: 4px;
 }
 
@@ -377,6 +557,12 @@
 .trending-text p:last-child {
   color: #636363;
 }
+
+
+/* -------------------------
+   Trending Icon Colors
+   ------------------------- */
+
 
 .tegan-icon {
   background-color: #dbeafe;
